@@ -11,7 +11,7 @@ background-color: rgb(203 213 225);
 
 function App() {
 
-  const {settingTotalData,settingCurrentPageProducts,totalProducts,settingTotalPage,currentPage} = useContext(AppContext)
+  const {settingTotalData,settingCurrentPageProducts,totalProducts,settingTotalPage,currentPage,setCurrentPage} = useContext(AppContext)
 
   useEffect(() => {
     settingTotalData();
@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     settingTotalPage();
     settingCurrentPageProducts();
-
+    setCurrentPage(0);
   },[totalProducts]);
 
   useEffect(() => {
